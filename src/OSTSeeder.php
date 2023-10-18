@@ -3,6 +3,9 @@ include_once 'Song.php';
 include_once 'VideogameOST.php';
 class OSTSeeder
 {
+    /**
+     * @return osts an array consisting of 3 OSTs. Which consist of 4 Songs each.
+     */
     public static function getOSTs(): array
     {
         $song1 = new Song(1, 'Rip & Tear', 'Mick Gordon', 2, 267);
@@ -23,6 +26,7 @@ class OSTSeeder
         $song12=new Song(12,'ASGORE','Toby Fox',77,156);
         $ost3=new VideogameOST(3,'UNDERTALE Soundtrack','UNDERTALE',2015,array($song9,$song10,$song11,$song12));
 
-        return array($ost1,$ost2,$ost3);
+        $osts=array($ost1,$ost2,$ost3);
+        return $osts;
     }
 }
