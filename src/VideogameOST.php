@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-class VideogameOST
+class VideogameOST implements JsonSerializable
 {
     public int $ID;
     public string $name;
@@ -25,5 +25,16 @@ class VideogameOST
         $this->videoGameName = $videoGameName;
         $this->releaseYear = $releaseYear;
         $this->trackList = $trackList;
+    }
+
+    function jsonSerialize(): mixed
+    {
+        return [
+            'ID' => $this->ID,
+            'name' => $this->name,
+            'videoGameName' => $this->videoGameName,
+            'releaseYear' => $this->releaseYear,
+            'trackList' => [$this->trackList]
+        ];
     }
 }

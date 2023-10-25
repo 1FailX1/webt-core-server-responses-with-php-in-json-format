@@ -1,6 +1,7 @@
 <?php
+
 declare(strict_types=1);
-class Song
+class Song implements JsonSerializable
 {
     private int $id;
     private string $name;
@@ -22,5 +23,16 @@ class Song
         $this->artist = $artist;
         $this->trackNumber = $trackNumber;
         $this->duration = $duration;
+    }
+
+    public function jsonSerialize(): mixed
+    {
+        return [
+            'ID' => $this->id,
+            'name' => $this->name,
+            'artist' => $this->artist,
+            'trackNumber' => $this->trackNumber,
+            'duration' => $this->duration
+        ];
     }
 }
