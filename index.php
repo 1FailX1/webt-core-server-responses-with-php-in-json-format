@@ -12,6 +12,7 @@
             <option value=1>Doom</option>
             <option value=2>Crypt of the Necrodancer</option>
             <option value=3>UNDERTALE</option>
+            <option value='all'>ALL</option>
         </select>
 
         <input type="submit" value="submited">
