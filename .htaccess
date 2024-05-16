@@ -1,0 +1,3 @@
+RewriteEngine On
+RewriteRule "^ostData/([\w\s\-)\(]+)$" "http://ostlib.local/api/api.php?ostData=$1" [B]
+RewriteRule "^ostID/([0-9a-zA-Z]+)$" "http://ostlib.local/api/api.php?ostID=$1"

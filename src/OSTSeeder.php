@@ -4,7 +4,7 @@ require_once 'VideogameOST.php';
 class OSTSeeder
 {
     /**
-     * @return osts an array consisting of 3 OSTs. Which consist of 4 Songs each.
+     * @return array an array consisting of 3 OSTs. Which consist of 4 Songs each.
      */
     public static function getOSTs(): array
     {
